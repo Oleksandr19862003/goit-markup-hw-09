@@ -1,0 +1,122 @@
+.section-footer {
+	background: #2f303a;
+	padding: 60px 0;
+}
+
+.footer__logo {
+	color: var(--main-white);
+	margin-right: 0;
+	padding: 0;
+}
+
+.footer-address {
+	margin-top: 20px;
+
+	&__item:nth-child(n + 2) {
+		margin-top: 9px;
+	}
+
+	&__city {
+		line-height: 1.71;
+		font-style: normal;
+		color: var(--main-white);
+	}
+
+	&__contacts {
+		color: rgba(255, 255, 255, 0.6);
+		font-style: normal;
+		line-height: 1.71;
+		text-align: left;
+		transition: color var(--common-anim-time) var(--common-cubic-bezier);
+	}
+
+	&__contacts:hover,
+	&__contacts:focus {
+		color: var(--main-blue);
+	}
+}
+
+.footer__contacts {
+	margin-right: 70px;
+	align-self: baseline;
+}
+
+/* Вкладенний блок footer-socials */
+
+.footer-socials {
+	align-self: baseline;
+
+	&__subtitle {
+		@include font(14px, 1.143, inherit);
+		text-transform: uppercase;
+		color: var(--main-white);
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		background: rgba(255, 255, 255, 0.1);
+		fill: var(--main-white);
+	}
+}
+
+/* Форма для підвала */
+
+.footer-form {
+	align-self: baseline;
+	margin-left: 93px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-white);
+	margin-bottom: 20px;
+
+	&__title {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+	&__field {
+		width: 358px;
+		padding: 14px 16px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		@include font(inherit, 1.25, inherit);
+		font-weight: 400;
+		border-radius: 4px;
+		background-color: #2f303a;
+		color: rgba(255, 255, 255, 0.6);
+		outline: none;
+	}
+
+	&__field::placeholder {
+		color: rgba(255, 255, 255, 0.6);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.25;
+	}
+
+	&__field:focus {
+		border: 1px solid var(--main-blue);
+		outline: none;
+	}
+
+	&__btn {
+		@extend %btn;
+		position: relative;
+		padding: 8px 62px 8px 28px;
+		margin-left: 12px;
+	}
+
+	&__btn:hover .footer-form__icon,
+	&__btn:focus .footer-form__icon {
+		fill: var(--main-black);
+	}
+
+	&__icon {
+		position: absolute;
+		fill: var(--main-white);
+		left: 148px;
+		top: 13px;
+		// @include transition(fill);
+		transition: fill var(--common-anim-time) var(--common-cubic-bezier);
+	}
+}
