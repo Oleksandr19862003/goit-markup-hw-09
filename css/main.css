@@ -109,15 +109,6 @@ body {
   border: 1px solid #ececec;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
 @media screen and (max-width: 480px) {
   .section {
     padding: 60px 0;
@@ -162,12 +153,6 @@ body {
 
 .header {
   border: 1px solid #ececec;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .logo {
@@ -232,7 +217,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1359,11 +1344,6 @@ body {
   outline: none;
 }
 
-@media (min-width: 480px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
