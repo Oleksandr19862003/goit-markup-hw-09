@@ -1,28 +1,46 @@
 .hero {
 	text-align: center;
-	padding: 200px 0;
 	background: #2f303a;
-	background-image: linear-gradient(
-			to right,
-			rgba(47, 48, 58, 0.4),
-			rgba(47, 48, 58, 0.4)
-		),
-		url(../images/hero-image.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
-	max-width: 1600px;
 	margin: 0 auto;
+	@media screen and (min-width: 480px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-m.jpg);
+		padding: 118px 0;
+	}
+	@media screen and (min-width: 768px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-t.jpg);
+		padding: 118px 0;
+	}
+	@media screen and (min-width: 1200px) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg-l.jpg);
+		padding: 200px 0;
+		max-width: 1600px;
+	}
 
 	&__headline {
 		text-transform: uppercase;
-		font-size: 44px;
-		line-height: 1.36;
 		color: var(--main-white);
 		font-weight: 900;
 		letter-spacing: 0.06em;
 		text-align: center;
-		width: 696px;
 		margin: 0 auto;
+		@media screen and (min-width: 480px) {
+			font-size: 26px;
+			line-height: 1.62;
+			width: 360px;
+		}
+		@media screen and (min-width: 768px) {
+			font-size: 26px;
+			line-height: 1.62;
+			width: 360px;
+		}
+		@media screen and (min-width: 1200px) {
+			max-width: 1600px;
+			font-size: 44px;
+			line-height: 1.36;
+			width: 696px;
+		}
 	}
 
 	&__btn {

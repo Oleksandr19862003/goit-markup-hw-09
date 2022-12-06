@@ -1,23 +1,51 @@
+.header {
+	border: 1px solid #ececec;
+	justify-content: center;
+	align-items: center;
+}
+
 .logo {
 	font-family: var(--font-family-accent);
 	font-weight: var(--font-weght-bold);
-	@include font(26px, 1.192, inherit);
-	font-size: 26px;
-	line-height: 1.192;
-	padding: 24px 0 25px;
-	margin-right: 93px;
 	justify-content: center;
+
+	@media screen and (min-width: 480px) {
+		@include font(24px, 1.17, inherit);
+		padding: 16px 0;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 24px 0 25px;
+		margin-right: 93px;
+	}
+	@media screen and (min-width: 1200px) {
+		@include font(26px, 1.192, inherit);
+		margin-right: 93px;
+		padding: 24px 0 25px;
+	}
+}
+
+.header-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 }
 
 .nav {
 	&__list {
 		font-weight: var(--font-weight-regular);
 		@include font(inherit, 1.14, 0.02em);
-		line-height: 1.14;
 		color: var(--main-black);
-		letter-spacing: 0.02em;
 		display: flex;
 		align-items: center;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -82,13 +110,19 @@
 }
 
 /* Вкладений блок header contacts */
+
 .header-contacts {
-	&__list {
-		margin-left: auto;
+	display: flex;
+	margin-left: auto;
+	@media screen and (max-width: 1200px) {
+		flex-direction: column;
 	}
 
 	&__item:nth-child(2) {
 		margin-left: 50px;
+		@media screen and (max-width: 1200px) {
+			margin-left: 0px;
+		}
 	}
 
 	&__link {
@@ -99,22 +133,25 @@
 		padding: 32px 0;
 		color: var(--main-grey);
 		transition: color var(--common-anim-time) var(--common-cubic-bezier);
-	}
+		@media screen and (min-width: 768px) {
+			padding: 5px 0;
+		}
 
-	&__icon {
-		margin-right: 10px;
-		fill: currentColor;
-	}
-	&__list {
-		margin-left: auto;
-	}
+		&__icon {
+			margin-right: 10px;
+			fill: currentColor;
+		}
+		&__list {
+			margin-left: auto;
+		}
 
-	&__item:nth-child(2) {
-		margin-left: 50px;
-	}
+		&__item:nth-child(2) {
+			margin-left: 50px;
+		}
 
-	&__icon {
-		margin-right: 10px;
-		fill: currentColor;
+		&__icon {
+			margin-right: 10px;
+			fill: currentColor;
+		}
 	}
 }
