@@ -1,7 +1,15 @@
 .section-directions {
 	padding-top: 0;
+	display: flex;
+
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
 }
 .directions {
+	display: flex;
+	align-items: baseline;
+
 	&__image:nth-child(n + 2) {
 		margin-left: 30px;
 	}

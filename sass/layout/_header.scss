@@ -1,12 +1,34 @@
+.header {
+	@media screen and (max-width: 767px) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
 .logo {
 	font-family: var(--font-family-accent);
 	font-weight: var(--font-weght-bold);
 	@include font(26px, 1.192, inherit);
 	font-size: 26px;
 	line-height: 1.192;
-	padding: 24px 0 25px;
+
 	margin-right: 93px;
 	justify-content: center;
+
+	@media screen and (min-width: 480px) {
+		font-size: 24px;
+		line-height: 1.17;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 24px 0 25px;
+	}
+}
+
+.header-wrap {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 }
 
 .nav {
@@ -82,6 +104,11 @@
 }
 
 /* Вкладений блок header contacts */
+
+// .header-contacts {
+// 	display: none;
+// }
+
 .header-contacts {
 	&__list {
 		margin-left: auto;
