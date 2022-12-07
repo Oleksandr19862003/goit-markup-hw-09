@@ -1123,8 +1123,6 @@ body {
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
   background-color: var(--main-white);
   top: 50%;
   left: 50%;
@@ -1138,6 +1136,24 @@ body {
           box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -1206,12 +1222,11 @@ body {
   margin-top: 4px;
 }
 .modal-form__field {
-  width: 100%;
+  display: block;
   height: 40px;
+  padding: 14px 15px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 40px;
-  padding-right: 40px;
   outline: none;
   cursor: pointer;
   -webkit-transition-property: fill;
@@ -1224,6 +1239,23 @@ body {
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill var(--common-anim-time) var(--common-cubic-bezier), border var(--common-anim-time) var(--common-cubic-bezier);
+  transition: fill var(--common-anim-time) var(--common-cubic-bezier), border var(--common-anim-time) var(--common-cubic-bezier);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__field {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .modal-form__field {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__field {
+    width: 100%;
+  }
 }
 .modal-form__field:focus {
   border: 1px solid var(--main-blue);
@@ -1301,13 +1333,29 @@ body {
   margin-bottom: 30px;
 }
 .modal-agreement__desc {
-  font-weight: 400;
-  line-height: 1.72;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   color: var(--main-grey);
+}
+@media screen and (min-width: 480px) {
+  .modal-agreement__desc {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 767px) {
+  .modal-agreement__desc {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-agreement__desc {
+    font-weight: 400;
+    line-height: 1.72;
+  }
 }
 .modal-agreement__checkbox:checked + .modal-agreement__icon .modal-agreement__check {
   opacity: 1;
