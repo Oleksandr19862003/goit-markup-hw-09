@@ -26,19 +26,16 @@
 		text-align: center;
 		margin: 0 auto;
 		@media screen and (min-width: 480px) {
-			font-size: 26px;
-			line-height: 1.62;
+			@include font(26px, 1.62, inherit);
 			width: 360px;
 		}
 		@media screen and (min-width: 768px) {
-			font-size: 26px;
-			line-height: 1.62;
+			@include font(26px, 1.62, inherit);
 			width: 360px;
 		}
 		@media screen and (min-width: 1200px) {
 			max-width: 1600px;
-			font-size: 44px;
-			line-height: 1.36;
+			@include font(44px, 1.36, inherit);
 			width: 696px;
 		}
 	}

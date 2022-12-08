@@ -1,7 +1,7 @@
 @mixin transition($property...) {
 	transition-property: $property;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: var(--common-anim-time);
+	transition-timing-function: var(--common-cubic-bezier);
 }
 @mixin font($fs, $lh, $ls) {
 	font-size: $fs;
