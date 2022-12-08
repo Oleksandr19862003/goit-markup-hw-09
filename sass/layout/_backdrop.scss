@@ -27,13 +27,13 @@
 	padding: 40px;
 
 	@media screen and (min-width: 480px) {
-		width: 450px;
-		height: 609px;
+		min-width: 450px;
+		min-height: 609px;
 	}
 
 	@media screen and (min-width: 767px) {
-		width: 450px;
-		height: 609px;
+		min-width: 450px;
+		min-height: 609px;
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -58,8 +58,6 @@
 	&__icon {
 		fill: #000000;
 		@include transition(fill);
-		// transition: fill var(--common-anim-time)
-		// 	var(--common-cubic-bezier);
 	}
 
 	&:hover .modal-close__icon,
@@ -112,11 +110,11 @@
 		@include transition(border);
 		transition: fill var(--common-anim-time) var(--common-cubic-bezier), border var(--common-anim-time) var(--common-cubic-bezier);
 		@media screen and (min-width: 480px) {
-			width: 370px;
+			width: 100%;
 		}
 
 		@media screen and (min-width: 767px) {
-			width: 370px;
+			width: 100%;
 		}
 
 		@media screen and (min-width: 1200px) {
